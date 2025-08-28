@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.glow{box-shadow:0 0 0 1px rgba(99,102,241,.15), 0 20px 60px rgba(99,102,241,.15)}
+.bg-grid{background-image:linear-gradient(to right, rgba(148,163,184,.06) 1px, transparent 1px),linear-gradient(to bottom, rgba(148,163,184,.06) 1px, transparent 1px);background-size:24px 24px}
+.section-sep{position:relative}
+.section-sep::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:-1px;width:92%;height:1px;background:linear-gradient(90deg,transparent,rgba(99,102,241,.6),transparent)}
+@keyframes float-slow{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes float-fast{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+.float-slow{animation:float-slow 8s ease-in-out infinite}
+.float-fast{animation:float-fast 6s ease-in-out infinite}
+
+:root {
+  color-scheme: light dark;
+}
+
+html, body, #root { height: 100%; }
+body { @apply antialiased bg-slate-950 text-slate-100; }
+
+.container { @apply mx-auto max-w-6xl px-4; }
